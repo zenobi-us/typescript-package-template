@@ -100,11 +100,18 @@ set_placeholder() {
     value="$2"
     out="$3"
 
+    # loop through file contents and replace placeholders
     git grep -P -l -F --untracked "$name" -- "$out" |
         while IFS=$'\n' read -r file; do
             tmpfile="$file.sed"
             sed "s#$name#$value#g" "$file" >"$tmpfile" && mv "$tmpfile" "$file"
+
+            # if filename contains placeholder, rename it
+            if echo "$file" | grep -q "$name"; then
+                mv "$file" "${file/$name/$value}"
+            fi
         done
+
 }
 
 setup() {
@@ -214,6 +221,6 @@ case "${1:-}" in
     ./template/tools.sh
     ;;
 *)
-    setup_github "$@"
+    setup "$@"
     ;;
 esac

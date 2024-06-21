@@ -20,11 +20,17 @@ jobs:
         uses: actions/checkout@v4
       - name: Run Template Setup
         run: |
-          git config user.name "Foo Bearer"
+
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+
           ./setup.bash \
-            "foo" \
-            "Zenobius" \
-            "Zenobius" \
+            "@foo/bar_tool" \
+            "bar_tool" \
+            "username" \
+            "author name" \
+            "username/bar_tool" \
+            "master" \
             "Apache-2.0" \
             "yes"
 
@@ -34,6 +40,7 @@ jobs:
               printf "\033[0;31m %s \033[0m \n" "$1"
               exit 1
           }
+
 
           set -xe
 
