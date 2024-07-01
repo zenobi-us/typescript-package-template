@@ -2,16 +2,6 @@
   "name": "<PACKAGE NAME>",
   "version": "0.0.1",
   "dependencies": {
-    "hast-util-from-html-isomorphic": "2.0.0",
-    "hast-util-to-html": "^9.0.0",
-    "hast-util-to-string": "^3.0.0",
-    "hastscript": "^9.0.0",
-    "mdast": "3.0.0",
-    "nomnoml": "1.6.2",
-    "tslib": "^2.3.0",
-    "unified": "11.0.4",
-    "unist-util-visit-parents": "6.0.1",
-    "vfile": "6.0.1"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.3",
@@ -32,7 +22,6 @@
     "is-ci": "^3.0.1",
     "jsonc-eslint-parser": "^2.4.0",
     "lint-staged": "^15.2.7",
-    "open": "^10.1.0",
     "prettier": "^3.2.2",
     "puppeteer": "^22.11.2",
     "remark": "15.0.1",
@@ -47,13 +36,14 @@
     "vite": "^5.3.1",
     "vitest": "^1.6.0"
   },
-  "main": "./dist/<EXPORT NAME>.js",
-  "types": "./dist/<EXPORT NAME>.d.ts",
+  "type": "module",
+  "main": "./dist/<EXPORT NAME>.cjs",
+  "types": "./dist/<EXPORT NAME>.d.cts",
   "exports": {
     ".": {
-      "import": "./dist/<EXPORT NAME>.js",
-      "require": "./dist/<EXPORT NAME>.js",
-      "types": "./dist/<EXPORT NAME>.d.ts"
+      "import": "./dist/<EXPORT NAME>.cjs",
+      "require": "./dist/<EXPORT NAME>.cjs",
+      "types": "./dist/<EXPORT NAME>.d.cts"
     }
   },
   "files": [
@@ -69,5 +59,9 @@
   "author": {
     "name": "<YOUR NAME>",
     "email": "<YOUR GITHUB USERNAME>@users.noreply.github.com"
+  },
+  "repository": {
+    "type": "github",
+    "url": "<PACKAGE REPO>"
   }
 }

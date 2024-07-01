@@ -26,7 +26,12 @@ unittest:
     @vitest --dir ./src
 
 integrationtest:
-    tsx e2e/produces-rendered-svg.test.ts
+    @echo "Add your integration tests here"
+
+dev:
+    @tsx \
+        --watch \
+        ./src/demo/index.ts
 
 build:
     @tsup \
@@ -40,7 +45,7 @@ docs:
         --plugin typedoc-plugin-markdown \
         --tsconfig ./tsconfig.lib.json \
         --out dist/docs \
-        ./src/remark-nomnoml.ts \
+        ./src/<EXPORT NAME>.ts \
             --hideBreadcrumbs true \
             --namedAnchors true \
             --disableSources \
