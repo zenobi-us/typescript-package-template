@@ -137,7 +137,7 @@ setup() {
     # - the package name with hyphens replaced by underscores
     export_name="${export_name//-/_}"
     # - and in lowercase
-    export_name="$(export_name | tr '[:upper:]' '[:lower:]')"
+    export_name="$(echo "$export_name" | tr '[:upper:]' '[:lower:]')"
 
     github_username="${3:-$(ask_for "Your GitHub username")}"
     author_name="${4:-$(ask_for "Your name" "$(git config user.name 2>/dev/null)")}"
