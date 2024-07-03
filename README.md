@@ -1,4 +1,4 @@
-# typescript-package-template [![Build](https://github.com/zenobi.us/typescript-package-template/actions/workflows/build.yml/badge.svg)](https://github.com/zenobi.us/typescript-package-template/actions/workflows/build.yml) [![Lint](https://github.com/zenobi.us/typescript-package-template/actions/workflows/lint.yml/badge.svg)](https://github.com/zenobi.us/typescript-package-template/actions/workflows/lint.yml)
+# typescript-package-template [![Test](https://github.com/zenobi-us/typescript-package-template/actions/workflows/test.yml/badge.svg)](https://github.com/zenobi-us/typescript-package-template/actions/workflows/test.yml) [![Lint](https://github.com/zenobi-us/typescript-package-template/actions/workflows/lint.yml/badge.svg)](https://github.com/zenobi-us/typescript-package-template/actions/workflows/lint.yml)
 
 This is an [Typescript] template.
 
