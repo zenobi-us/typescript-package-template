@@ -7,6 +7,8 @@ export default defineConfig((options) => {
     shims: true,
 
     entry: ['src/<EXPORT NAME>.ts'],
+    
+    external: [],
 
     minify: !options.watch,
     splitting: false,
