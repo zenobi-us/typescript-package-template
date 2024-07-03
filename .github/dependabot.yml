@@ -6,7 +6,7 @@ updates:
     schedule:
       interval: "weekly"
     commit-message:
-      prefix: "chore(deps):"
+      prefix: "chore(deps): github-actions "
 
   # dependabot for GitHub Actions for the template
   - package-ecosystem: "github-actions"
@@ -14,4 +14,12 @@ updates:
     schedule:
       interval: "weekly"
     commit-message:
-      prefix: "chore(deps):"
+      prefix: "chore(deps): template github-actions "
+
+  - package-ecosystem: "npm"
+    directory: "template/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      # Prefix all commit messages with "npm: "
+      prefix: "chore(deps): template npm packages"
