@@ -23,7 +23,7 @@
     "jsonc-eslint-parser": "^2.4.0",
     "lint-staged": "^15.2.7",
     "prettier": "^3.2.2",
-    "puppeteer": "^22.11.2",
+    "puppeteer": "^22.15.0",
     "remark": "15.0.1",
     "ts-node": "10.9.1",
     "tslib": "^2.3.0",
